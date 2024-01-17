@@ -106,7 +106,7 @@ class Parser:
             self.store = False
 
             if nseq == 0:
-                raise ValueError(f"File ({self.filename}) had 0 lines.")
+                raise ValueError(f"File {self.filename} had 0 lines.")
 
         # another way to do this with the original construction: 
         #    while True:
