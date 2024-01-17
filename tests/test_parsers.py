@@ -34,8 +34,8 @@ def test_FastaParser():
     provided in /tests/bad.fa and /tests/empty.fa
     """
     good_file = 'data/test.fa'
-    bad_file = 'data/bad.fa'
-    blank_file = 'data/blank.fa'
+    bad_file = 'tests/bad.fa'
+    blank_file = 'tests/blank.fa'
 
     parser_good = FastaParser(good_file)
     parser_bad = FastaParser(bad_file)

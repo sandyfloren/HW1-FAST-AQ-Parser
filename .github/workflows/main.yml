@@ -30,4 +30,4 @@ jobs:
           pip install .
       
       - name: Run unit tests
-        run: python -m pytest -v tests/*
+        run: python -m pytest -v tests/*.py
