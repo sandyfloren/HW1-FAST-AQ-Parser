@@ -34,8 +34,8 @@ def test_FastaParser():
     provided in /tests/bad.fa and /tests/empty.fa
     """
     good_file = 'data/test.fa'
-    bad_file = 'tests/bad.fa'
-    blank_file = 'tests/blank.fa'
+    bad_file = 'data/bad.fa'
+    blank_file = 'data/blank.fa'
 
     parser_good = FastaParser(good_file)
     parser_bad = FastaParser(bad_file)
@@ -84,6 +84,12 @@ def test_FastaFormat():
 
     assert lines[0][0] is not None, "Fasta format error: first line is empty"
 
+    fastq = 'data/test.fq'
+    parser = FastaParser(fastq)
+    lines = [rec for rec in parser]
+
+    assert lines[0][0] is None, "Fasta format error: first line is empty"
+
 
 
 def test_FastqParser():
@@ -124,3 +130,9 @@ def test_FastqFormat():
     lines = [rec for rec in parser]
 
     assert lines[0][0] is not None, "Fastq format error: first line is empty"
+
+    fasta = 'data/test.fa'
+    parser = FastqParser(fasta)
+    lines = [rec for rec in parser]
+
+    assert lines[0][0] is None, "Fastq format error: first line is empty"
