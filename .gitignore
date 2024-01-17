@@ -1,0 +1,4 @@
+.ipynb_checkpoints/ # jupyter notebook save points
+src/example/__pycache__ # build cache for our Python package
+build/*
+.DS_Store # Desktop services storre, an invisible file on the macOS that's automatically created 
